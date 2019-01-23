@@ -21,7 +21,7 @@ class TicTacToe:
                "SQ9": " "}
 
     # funtion that prints positions on the playing board
-    def print_position():
+    def print_position(self):
 
         print(" " + "1" + " | " + "2" + " | " + "3" + " " )
         print("---|---|---")
@@ -97,6 +97,22 @@ class TicTacToe:
                 self.gamedict["SQ9"] = "O"
         else:
             print("Invalid number selected")
+
+
+    # function to clear the board for a new game
+    def clearBoard(self):
+        self.gamedict["SQ1"] = " "
+        self.gamedict["SQ2"] = " "
+        self.gamedict["SQ3"] = " "
+        self.gamedict["SQ4"] = " "
+        self.gamedict["SQ5"] = " "
+        self.gamedict["SQ6"] = " "
+        self.gamedict["SQ7"] = " "
+        self.gamedict["SQ8"] = " "
+        self.gamedict["SQ9"] = " "
+        self.xWin = False
+        self.oWin = False
+
 
     # function to see if X has won
     def isX_Won(self):
