@@ -36,6 +36,7 @@ while(stopPlaying == False):
     while(xWin == False and oWin == False):
         oneRoundDown = True
 
+        # if neither player has won
         if(player1_or_2 % 2 == 1):
             #prompt player for position
             playerposition = int(input("\nPlayer 1, please pick your position: \n(Please enter an integer between 1 and 9)\n"))
@@ -68,6 +69,7 @@ while(stopPlaying == False):
         elif(oWin):
             print("\nPlayer 2 wins!!!")
             thisgame.clearBoard()
+        # if the game ends in a draw
         elif(player1_or_2 > 9):
             print("\nIt's a draw!!!")
             thisgame.clearBoard()
@@ -76,17 +78,19 @@ while(stopPlaying == False):
     #ask user if they would like to continue
     toContinue = input("Would you like to continue? \nPlease type \"Y\"  or \"N\"\n")
 
+    # if at least one round has been played
     if(oneRoundDown == True):
+        # if user would like to continue
         if (toContinue == "Y" or toContinue == "y"):
             stopPlaying = False
             oneRoundDown = False
             xWin = False
             oWin = False
             player1_or_2 = 1
-
+        # if user would not like to continue
         elif (toContinue == "N" or toContinue == "n"):
             stopPlaying = True
-
+        # if input is not valid
         else:
             print("Input was invalid")
             stopPlaying = True
