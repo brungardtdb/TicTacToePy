@@ -77,14 +77,14 @@ while(stopPlaying == False):
     toContinue = input("Would you like to continue? \nPlease type \"Y\"  or \"N\"\n")
 
     if(oneRoundDown == True):
-        if (toContinue == "Y"):
+        if (toContinue == "Y" or toContinue == "y"):
             stopPlaying = False
             oneRoundDown = False
             xWin = False
             oWin = False
             player1_or_2 = 1
 
-        elif (toContinue == "N"):
+        elif (toContinue == "N" or toContinue == "n"):
             stopPlaying = True
 
         else:
